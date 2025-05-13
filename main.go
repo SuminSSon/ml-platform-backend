@@ -26,6 +26,8 @@ func main() {
 		// WebSocket
 		api.GET("/ws/pods", handlers.PodStream)
 		api.GET("/ws/logs/:podName", handlers.PodLogStream)
+
+        api.GET("/pods/stream", handlers.PodStream)
 	}
 
 	r.Run(":8080")
