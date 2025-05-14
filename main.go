@@ -23,6 +23,8 @@ func main() {
 
 		api.GET("/cluster/resources", handlers.GetClusterResources)
 
+        api.POST("/pod/create", handlers.CreatePod)
+
 		// WebSocket
 		api.GET("/ws/pods", handlers.PodStream)
 		api.GET("/ws/logs/:podName", handlers.PodLogStream)
